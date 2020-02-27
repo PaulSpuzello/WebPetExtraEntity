@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class ListPet {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="ID")
+	@Column(name="PET_ID")
 	private int id;
 	@Column(name="TYPE")
 	private String type;
@@ -21,6 +21,9 @@ public class ListPet {
 	@Column(name="OWNER")
 	private String owner;
 	
+	public ListPet() {
+		super();
+	}
 	
 	public int getId() {
 		return id;
@@ -52,10 +55,6 @@ public class ListPet {
 
 	public void setOwner(String owner) {
 		this.owner = owner;
-	}
-	
-	public ListPet() {
-		
 	}
 	
 	public ListPet(String type, String name, String owner) {
